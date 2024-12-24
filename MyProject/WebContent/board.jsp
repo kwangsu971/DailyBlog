@@ -97,10 +97,9 @@
 					%>
 						<tr>
 							<td><%= list.get(i).getWritingID() %></td> 
-							<td><a href="view.jsp?writingID=<%=list.get(i).getWritingID()%>"><%= list.get(i).getWritingTitle() %></a></td>
+							<td><a href="view.jsp?writingID=<%=list.get(i).getWritingID()%>"><%= list.get(i).getWritingTitle().replaceAll(" ","&nbsp;").replaceAll("<", "&lt;").replaceAll(">", "&gt;").replaceAll("\n", "<br>") %></a></td>
 							<td><%= list.get(i).getUserID() %></td>
-							<td><%= list.get(i).getWritingDate().substring(0, 11) + list.get(i).getWritingDate().substring(11,13) + "시" + 
-									list.get(i).getWritingDate().substring(14, 16) + "분" %></td>
+							<td><%= list.get(i).getWritingDate().substring(0, 11) %></td>
 						</tr>
 					<%		
 						}

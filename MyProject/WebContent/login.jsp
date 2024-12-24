@@ -6,6 +6,7 @@
 <meta http-equiv="Content=Type" content="text/html; charset=UTF-8">
 <meta name ="viewlort" content="width=device=width", inital-scale="1">
 <link rel="stylesheet" href="css/bootstrap.css">
+<link rel="stylesheet" href="css/custom.css">
 <title>일상공유블로그</title>
 </head>
 <body>

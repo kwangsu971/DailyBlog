@@ -130,6 +130,32 @@ public class WritingDAO {
 		}
 		return null;
 	}
+	
+	 public int update(int writingID, String writingTitle, String writingContent) {
+	        String SQL = "UPDATE writing SET writingTitle = ?, writingContent = ? WHERE writingID = ?";
+	        try (PreparedStatement pstmt = conn.prepareStatement(SQL)) {
+	            pstmt.setString(1, writingTitle);
+	            pstmt.setString(2, writingContent);
+	            pstmt.setInt(3, writingID);
+	            return pstmt.executeUpdate(); // 업데이트 성공 시 1 반환
+	        } catch (Exception e) {
+	            e.printStackTrace();
+	        }
+		return -1;
+	}
+	
+	public int delete(int writingID) {
+		String SQL = "UPDATE writing SET writingAvailable = 0 WHERE writingID =?";
+		
+		try {
+			PreparedStatement pstmt = conn.prepareStatement(SQL);
+			pstmt.setInt(1, writingID);
+			return pstmt.executeUpdate();
+		}catch(Exception e) {
+			e.printStackTrace();
+		}
+		return -1;
+	}
 }
 	
 
