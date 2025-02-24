@@ -79,7 +79,7 @@
 	</nav>
 	<div class = "container">
 		<div class = "row">
-			<form method ="post" action="updateAction.jsp?writingID=<%= writingID%>">
+			<form method ="post" action="updateAction.jsp?writingID=<%= writingID%>" onsubmit="return confirm('이 글을 수정하시겠습니까?');">
 				<table class =" table table-striped" style="text-align: center; border: 1px solid #dddddd">
 					<thead>
 						<tr>
@@ -95,7 +95,7 @@
 						</tr>
 					</tbody>
 				</table>
-					<input type ="submit" class="btn btn-primary pull-right" value="수정">
+					<input type="submit" class="btn btn-primary pull-right" value="수정">
 			</form>
 		</div>
 	</div>

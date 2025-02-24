@@ -8,6 +8,18 @@
 <meta name ="viewlort" content="width=device=width" inital-scale="1">
 <link rel="stylesheet" href="css/bootstrap.css">
 <link rel="stylesheet" href="css/custom.css">
+
+<style>
+    .carousel-inner img {
+        width: 100%;
+        height: auto;
+    }
+    .carousel-container {
+        max-width: 800px; 
+        margin: 0 auto; 
+    }
+</style>
+
 <title>일상공유블로그</title>
 </head>
 <body>
@@ -64,38 +76,41 @@
 			%>	
 		</div>
 	</nav>
-	<div class="container">
-		<div class="jumbotron">
-			<div class="container">
-				<h1>블로그 소개</h1>
-				<p>즐거운 일상생활을 공유해주세요~</p>
-				<p><a class="btn btn-primary btn-pull" href="#" role="button">자세히 알아보기</a></p>
-			</div>		
-		</div>
-	</div>
-	<div class="containter">
-		<div id="myCarousel" class="carousel" data-ride="carousel">
-			<ol class="carousel-indicators">
-				<li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-				<li data-target="#myCarousel" data-slide-to="1"></li>
-				<li data-target="#myCarousel" data-slide-to="2"></li>
-			</ol>
-			<div class="carousel-inner">
-				<div class="item active">
-					<img src="images/1.jpg">
-				</div>
-				<div class="item active">
-					<img src="images/1.jpg">
-				</div>
-				<div class="item active">
-					<img src="images/1.jpg">
-				</div>
-			</div>
-			<a class="left carousel-control" href="#myCarousel" data-slide="prev">
-			
-			</a>
-		</div>
-	</div>
+<div class="container">
+    <div class="row">
+        <div class="col-md-6">
+            <h1>블로그 소개</h1>
+            <p>즐거운 일상생활을 공유해주세요~</p>
+            <p><a class="btn btn-primary btn-lg" href="#" role="button">자세히 알아보기</a></p>
+        </div>
+        <div class="col-md-6 carousel-container">
+            <div id="myCarousel" class="carousel slide" data-ride="carousel">
+                <ol class="carousel-indicators">
+                    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                    <li data-target="#myCarousel" data-slide-to="1"></li>
+                    <li data-target="#myCarousel" data-slide-to="2"></li>
+                </ol>
+                <div class="carousel-inner">
+                    <div class="item active">
+                        <img src="images/1.jpg" alt="Image 1">
+                    </div>
+                    <div class="item">
+                        <img src="images/2.jpg" alt="Image 2">
+                    </div>
+                    <div class="item">
+                        <img src="images/3.jpg" alt="Image 3">
+                    </div>
+                </div> 
+                <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+                    <span class="glyphicon glyphicon-chevron-left"></span>
+                </a>
+                <a class="right carousel-control" href="#myCarousel" data-slide="next">
+                    <span class="glyphicon glyphicon-chevron-right"></span>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
 	<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
 	<script src="js/bootstrap.js"></script>
 </body>

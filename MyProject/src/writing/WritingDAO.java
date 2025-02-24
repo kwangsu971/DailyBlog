@@ -137,7 +137,7 @@ public class WritingDAO {
 	            pstmt.setString(1, writingTitle);
 	            pstmt.setString(2, writingContent);
 	            pstmt.setInt(3, writingID);
-	            return pstmt.executeUpdate(); // 업데이트 성공 시 1 반환
+	            return pstmt.executeUpdate(); 
 	        } catch (Exception e) {
 	            e.printStackTrace();
 	        }
